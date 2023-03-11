@@ -6,8 +6,8 @@ import { createNoise2D } from 'simplex-noise'
 import { useFrame, useLoader } from "@react-three/fiber"
 
 //These have been taken from "Realistic real-time grass rendering" by Eddie Lee, 2010
-import bladeDiffuse from "./assets/images/blade_diffuse.jpeg"
-import bladeAlpha from "./assets/images/blade_alpha.jpeg"
+import bladeDiffuse from "./assets/images/blade_diffuse.jpg"
+import bladeAlpha from "./assets/images/blade_alpha.jpg"
 import "./GrassMaterial"
 
 const simplex = new createNoise2D(Math.random)
