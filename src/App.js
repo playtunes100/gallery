@@ -20,17 +20,17 @@ function Display(position, ...props){
 }
 
 function App() {
-  const [dpr, setDpr] = useState(1.5)
+  const [dpr, setDpr] = useState(0.5)
   return (
     <div className='App' style={{ width: window.innerWidth, height: window.innerHeight }}>
       <Suspense fallback={<span>loading...</span>}>
-      <Canvas  dpr={dpr} >
-      <PerformanceMonitor onIncline={() => setDpr(2)} onDecline={() => setDpr(1)} >
+      <Canvas dpr={dpr} camera={{ position: [0, 4, 4], fov: 75, near: 0.5, far: 100 }}>
+      <PerformanceMonitor onIncline={() => setDpr(2)} onDecline={() => setDpr(0.5)} >
         <Sky azimuth={100} inclination={0.8} distance={400} mieCoefficient={0} />
         <Grass width={400} instances={1000000} />
         <Image url={pic} scale={5} position={[0,4,0]} />
-        <Text3D position={[0,5,0]} scale={5} font={font}>C H I K A N E</Text3D>
-        <OrbitControls />
+        <Text3D position={[-10,4,-5]} scale={1} font={font}>C H I K A N E</Text3D>
+        <OrbitControls rotation={[30, 30, 0]} />
         </PerformanceMonitor>
       </Canvas>
       </Suspense>
