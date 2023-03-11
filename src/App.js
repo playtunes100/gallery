@@ -1,23 +1,35 @@
-import logo from './logo.svg';
 import './App.css';
+import * as THREE from "three"
+import { Canvas, useLoader} from '@react-three/fiber'
+import { Sky, Image, Text3D, Box, OrbitControls} from '@react-three/drei'
+import font from './assets/fonts/Press.json'
+import Grass from './Grass.js'
+import pic from './assets/images/naked.png'
+
+function Display(position, ...props){
+
+
+  return(
+    <group>
+      <Box scale={5} position={position}> <meshBasicMaterial transparent attach="material" map={useLoader(THREE.TextureLoader, pic)}/> </Box>
+     
+    </group>
+    
+  )
+}
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App' style={{ width: window.innerWidth, height: window.innerHeight }}>
+      <Canvas >
+        
+        <Sky azimuth={100} inclination={0.8} distance={400} mieCoefficient={0} />
+        <Grass width={400} instances={1000000} />
+        <Display position={[-3,10,0]} scale={5}/>
+        <Text3D position={[-3,10,0]} scale={5} font={font}>P A N T S</Text3D>
+        <OrbitControls />
+        
+      </Canvas>
     </div>
   );
 }
