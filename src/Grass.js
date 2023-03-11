@@ -17,7 +17,7 @@ export default function Grass({ options = { bW: 0.12, bH: 1, joints: 5 }, width 
   const materialRef = useRef()
   const [texture, alphaMap] = useLoader(THREE.TextureLoader, [bladeDiffuse, bladeAlpha])
   const attributeData = useMemo(() => getAttributeData(instances, width), [instances, width])
-  const baseGeom = useMemo(() => new THREE.PlaneBufferGeometry(bW, bH, 1, joints).translate(0, bH / 2, 0), [options])
+  const baseGeom = useMemo(() => new THREE.PlaneGeometry(bW, bH, 1, joints).translate(0, bH / 2, 0), [options])
   const groundGeo = useMemo(() => {
     const geo = new THREE.PlaneGeometry(width, width, 32, 32)
     geo.verticesNeedUpdate = true
