@@ -24,7 +24,7 @@ function App() {
   return (
     <div className='App' style={{ width: window.innerWidth, height: window.innerHeight }}>
       <Suspense fallback={<span>loading...</span>}>
-      <Canvas >
+      <Canvas  dpr={dpr} >
       <PerformanceMonitor onIncline={() => setDpr(2)} onDecline={() => setDpr(1)} >
         <Sky azimuth={100} inclination={0.8} distance={400} mieCoefficient={0} />
         <Grass width={400} instances={1000000} />
