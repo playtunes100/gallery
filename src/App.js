@@ -24,9 +24,9 @@ function App() {
       <Canvas >
         
         <Sky azimuth={100} inclination={0.8} distance={400} mieCoefficient={0} />
-        <Grass />
+        <Grass width={400} instances={1000000} />
         <Display position={[-3,10,0]} scale={5}/>
-        <Text3D position={[-3,10,0]} scale={5} font={font}>P A N T S</Text3D>
+        <Text3D position={[0,5,0]} scale={5} font={font}>K G O T H A T S O</Text3D>
         <OrbitControls />
         
       </Canvas>
