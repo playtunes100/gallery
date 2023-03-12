@@ -20,12 +20,12 @@ export default function Grass({ options = { bW: 0.12, bH: 1, joints: 5 }, width 
   const baseGeom = useMemo(() => new THREE.PlaneGeometry(bW, bH, 1, joints).translate(0, bH / 2, 0), [options])
   const groundGeo = useMemo(() => {
     const geo = new THREE.PlaneGeometry(width, width, 32, 32)
-    geo.verticesNeedUpdate = true
+    
     geo.lookAt(new THREE.Vector3(0, 1, 0))
   
     return geo
   }, [width])
-  
+  useFrame((state) => (materialRef.current.uniforms.time.value = state.clock.elapsedTime / 4))
   return (
     <group {...props}>
       <mesh>
