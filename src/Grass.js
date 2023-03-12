@@ -23,7 +23,6 @@ export default function Grass({ options = { bW: 0.12, bH: 1, joints: 5 }, width 
     geo.verticesNeedUpdate = true
     geo.lookAt(new THREE.Vector3(0, 1, 0))
   
-    geo.computeVertexNormals()
     return geo
   }, [width])
   useFrame((state) => (materialRef.current.uniforms.time.value = state.clock.elapsedTime / 4))
@@ -36,6 +35,7 @@ export default function Grass({ options = { bW: 0.12, bH: 1, joints: 5 }, width 
           <instancedBufferAttribute attach="attributes-stretch" args={[new Float32Array(attributeData.stretches), 1]} />
           <instancedBufferAttribute attach="attributes-halfRootAngleSin" args={[new Float32Array(attributeData.halfRootAngleSin), 1]} />
           <instancedBufferAttribute attach="attributes-halfRootAngleCos" args={[new Float32Array(attributeData.halfRootAngleCos), 1]} />
+          <instancedBufferAttribute needsUpdate={true} />
         </instancedBufferGeometry>
         <grassMaterial ref={materialRef} map={texture} alphaMap={alphaMap} toneMapped={false} />
       </mesh>
