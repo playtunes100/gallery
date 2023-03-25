@@ -29,7 +29,7 @@ function App(...props) {
       
       <PerformanceMonitor onIncline={() => setDpr(2)} onDecline={() => setDpr(0.5)} >
         <Sky azimuth={100} inclination={0.8} distance={400} mieCoefficient={0} />
-        <Grass width={5} instances={500} />
+        <Grass />
         <Display position={[0,4,0]}/>
         <Text3D position={[-10,4,-5]} scale={1} font={font} > <meshBasicMaterial color={'#0000FF'} /> C H I K A N E</Text3D>
         <OrbitControls rotation={[30, 30, 0]} />

@@ -84,8 +84,7 @@ const GrassMaterial = shaderMaterial(
         vPosition = rotateVectorByQuaternion(vPosition, direction);
       
        //Apply wind
-       float halfAngle = noise * 0.15;
-        vPosition = rotateVectorByQuaternion(vPosition, normalize(vec4(sin(halfAngle), 0.0, -sin(halfAngle), cos(halfAngle))));
+       
         //UV for texture
         vUv = uv;
         //Calculate final position of the vertex from the world offset and the above shenanigans 
