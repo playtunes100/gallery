@@ -11,7 +11,7 @@ const GrassMaterial = shaderMaterial(
     tipColor: new THREE.Color(0.0, 0.6, 0.0).convertSRGBToLinear(),
     bottomColor: new THREE.Color(0.0, 0.1, 0.0).convertSRGBToLinear(),
   },
-  `   precision mediump float;
+  `   precision highp float;
       attribute vec3 offset;
       attribute vec4 orientation;
       attribute float halfRootAngleSin;
@@ -84,7 +84,7 @@ const GrassMaterial = shaderMaterial(
         vPosition = rotateVectorByQuaternion(vPosition, direction);
       
        //Apply wind
-       float halfAngle = cos( time * 5.0 * 3.1416 / 4.0) * 0.15;
+       float halfAngle = noise * 0.15;
         vPosition = rotateVectorByQuaternion(vPosition, normalize(vec4(sin(halfAngle), 0.0, -sin(halfAngle), cos(halfAngle))));
         //UV for texture
         vUv = uv;
