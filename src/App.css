@@ -1,7 +1,10 @@
 .App {
   text-align: center;
   width: "50vw";
-  height: "50vh"
+  height: "50vh";
+  background-color: black;
+  overflow: hidden;
+
 }
 
 .App-logo {
