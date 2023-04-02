@@ -1,15 +1,38 @@
 {
   "files": {
-    "main.css": "/gallery/static/css/main.2fabd8a0.css",
-    "main.js": "/gallery/static/js/main.6f8d75de.js",
+    "main.css": "/gallery/static/css/main.d6795a4d.css",
+    "main.js": "/gallery/static/js/main.a1ecfc4c.js",
     "static/js/787.d7e7aaf3.chunk.js": "/gallery/static/js/787.d7e7aaf3.chunk.js",
+    "static/media/New-paper-bag.mp3": "/gallery/static/media/New-paper-bag.e69a88a7af91b85a2d78.mp3",
+    "static/media/chilled-and-posted.mp3": "/gallery/static/media/chilled-and-posted.4a60d2b48c7c60185d57.mp3",
+    "static/media/Night-Wolves.mp3": "/gallery/static/media/Night-Wolves.21ede204cba55c79602e.mp3",
+    "static/media/go-away-come-my-way.mp3": "/gallery/static/media/go-away-come-my-way.763274835fb5edf43cdf.mp3",
+    "static/media/doing-what-we-do.mp3": "/gallery/static/media/doing-what-we-do.21773bc889078d8abd04.mp3",
+    "static/media/The-life.mp3": "/gallery/static/media/The-life.59b9500d72fe3e4d2375.mp3",
+    "static/media/Fashion-figures.mp3": "/gallery/static/media/Fashion-figures.4738bb22e9b851cc07db.mp3",
+    "static/media/Selection.mp3": "/gallery/static/media/Selection.86d86d852e08adfe2b0f.mp3",
+    "static/media/soul-for-soles.mp3": "/gallery/static/media/soul-for-soles.1ca880921a5d9049da50.mp3",
+    "static/media/The-OG.mp3": "/gallery/static/media/The-OG.28ba84ce939a93003799.mp3",
+    "static/media/Again.mp3": "/gallery/static/media/Again.d23f59180f2f29edaf4e.mp3",
+    "static/media/The-Tall.mp3": "/gallery/static/media/The-Tall.613f0c2dd297bd18d5d5.mp3",
+    "static/media/Taxilians.mp3": "/gallery/static/media/Taxilians.47b667600601d70c4177.mp3",
+    "static/media/Good-Morning.mp3": "/gallery/static/media/Good-Morning.3a3ccdb0cf8c80f03a86.mp3",
+    "static/media/5.jpg": "/gallery/static/media/5.80a2748ac89700293dff.jpg",
+    "static/media/1.jpg": "/gallery/static/media/1.b29727310ce4176bde8b.jpg",
+    "static/media/6.jpg": "/gallery/static/media/6.8411ef17f4001a66a3a4.jpg",
+    "static/media/4.jpg": "/gallery/static/media/4.83e11e51208ea9150871.jpg",
+    "static/media/8.jpg": "/gallery/static/media/8.224f1dfdbabda872ae75.jpg",
+    "static/media/2.jpg": "/gallery/static/media/2.3b0121aa0fcb70205e18.jpg",
+    "static/media/7.jpg": "/gallery/static/media/7.6928a267e2cb767edad6.jpg",
+    "static/media/9.jpg": "/gallery/static/media/9.7735b0ceb173c0e0c5d6.jpg",
+    "static/media/3.jpg": "/gallery/static/media/3.22e9600a8463e66fb6e7.jpg",
     "index.html": "/gallery/index.html",
-    "main.2fabd8a0.css.map": "/gallery/static/css/main.2fabd8a0.css.map",
-    "main.6f8d75de.js.map": "/gallery/static/js/main.6f8d75de.js.map",
+    "main.d6795a4d.css.map": "/gallery/static/css/main.d6795a4d.css.map",
+    "main.a1ecfc4c.js.map": "/gallery/static/js/main.a1ecfc4c.js.map",
     "787.d7e7aaf3.chunk.js.map": "/gallery/static/js/787.d7e7aaf3.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2fabd8a0.css",
-    "static/js/main.6f8d75de.js"
+    "static/css/main.d6795a4d.css",
+    "static/js/main.a1ecfc4c.js"
   ]
 }
