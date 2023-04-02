@@ -1,27 +1,32 @@
 import './App.css';
 import * as THREE from "three"
-import { Suspense, useState, useRef} from 'react'
-import {Canvas, useThree} from '@react-three/fiber'
-import {Bounds, useBounds, Sky,Image, Stars,PerformanceMonitor, PositionalAudio, Text, OrbitControls} from '@react-three/drei'
-import forest from './assets/sounds/forest.ogg'
+import { Suspense, useState, useRef, useEffect} from 'react'
+import {Canvas} from '@react-three/fiber'
+import {Bounds, useBounds, Sky,Image, Stars,PerformanceMonitor, PositionalAudio, Text, Text3D, OrbitControls} from '@react-three/drei'
+import font from './assets/fonts/Press.json'
 import Grass from './Grass.js'
-import naked from './assets/images/pic4.JPG'
-import pic from './assets/images/naked.png'
-import spinner from './assets/images/pic1.JPG'
-import pop from './assets/images/pic2.JPG'
-import key from './assets/images/pic3.JPG'
+import list from './list.js'
 
-
-function Frame({name, url, c = new THREE.Color(), caption='A piece of art that doesnt last very long because of inflation.',...props}){
+function Frame({name, url, song, center = new THREE.Vector3(0,5,0), c = new THREE.Color(), caption='A piece of art that doesnt last very long because of inflation.',...props}){
   const image = useRef()
   const frame = useRef()
-  const cam = useThree((e) => e.camera.position)
-  console.log(cam)
+  const audio = useRef()
+  const object = useRef()
+
+  useEffect(() => {
+    object.current.lookAt(center)
+  })
+
+  const playSong = () => {
+    audio.current.play()
+  }
+  const stopSong = () => {
+    audio.current.stop()
+  }
   return(
-    <group {...props}>
+    <group ref={object} onClick={playSong} onPointerMissed={stopSong} {...props}>
     <mesh
       name={name}
-      lookAt={cam}
       scale={[2, 2, 0.05]}
       >
       <boxGeometry />
@@ -32,7 +37,8 @@ function Frame({name, url, c = new THREE.Color(), caption='A piece of art that d
       </mesh>
       <Image raycast={() => null} ref={image} position={[0, 0, 0.7]} url={url} />
     </mesh>
-    <Text maxWidth={2} color={'black'} anchorX="left" anchorY="top" position={[-1, -1.1, 0]} fontSize={0.125}>
+    <PositionalAudio url={song} ref={audio} playbackRate={1} distance={1} />
+    <Text maxWidth={2} color={'white'} anchorX="left" anchorY="top" position={[-1, -1.1, 0]} fontSize={0.125}>
       {caption}
     </Text>
   </group>
@@ -41,70 +47,21 @@ function Frame({name, url, c = new THREE.Color(), caption='A piece of art that d
 }
 
 function Display( {...props}){
-  const [feed] = useState([
-    {
-      id: 1,
-      src: spinner,
-      url: "/spinner",
-      desc: "Spinner 1",
-    },
-    {
-      id: 2,
-      src: pop,
-      url: "/pop",
-      desc: "Pop It 2",
-    },
-    {
-      id: 3,
-      src: key,
-      url: "/keyboard",
-      desc: "Mechanical Keyboard 3",
-    },
-    {
-      id: 4,
-      src: naked,
-      url: "/naked",
-      desc: "Interactive Naked Insurance ad 4",
-    }
-    ,
-    {
-      id: 5,
-      src: spinner,
-      url: "/spinner",
-      desc: "Spinner 5",
-    },
-    {
-      id: 6,
-      src: pop,
-      url: "/pop",
-      desc: "Pop It 6",
-    },
-    {
-      id: 7,
-      src: key,
-      url: "/keyboard",
-      desc: "Mechanical Keyboard 7",
-    },
-    {
-      id: 8,
-      src: naked,
-      url: "/naked",
-      desc: "Interactive Naked Insurance ad 8",
-    }
-    ,
-  ])
-  const radius = 8
+  const [feed] = useState(list)
+  const radius = 12
   const radian_interval = (2.0 * Math.PI) / feed.length;
   return(
     <group {...props}>
       {feed.map((item, i) =>{
       return(
-        <Frame key={i} name={item.id} url={item.src} caption={item.desc}  position={[(Math.cos(radian_interval * i) * radius),0, (Math.sin(radian_interval * i) * radius)]} />
+        <Frame key={i} song={item.song} name={item.id} url={item.src} caption={item.desc} position={[(Math.cos(radian_interval * i) * radius),0, (Math.sin(radian_interval * i) * radius)]} />
       )
     })}
     </group>
   )
 }
+
+
 
 function GreatControls({ children }) {
   const api = useBounds()
@@ -116,21 +73,18 @@ function GreatControls({ children }) {
 }
 
 function App(...props) {
-  const [start, setStart] = useState(false)
-  const startPage = () => {
-    setStart(true)
-  }
+  
   const [dpr, setDpr] = useState(0.5)
   return (
-    <div className='App' style={{ width: window.innerWidth, height: window.innerHeight }} onClick={startPage}>
-      {!start ?<h1 className='landing'>WHERE AM I</h1>:<Suspense fallback={<span style={{color: 'white'}}>loading...</span>}>
+    <div className='App' style={{ width: window.innerWidth, height: window.innerHeight }}>
+      <Suspense fallback={<span className='loading'>loading</span>}>
       <Canvas dpr={dpr} camera={{ position: [0,8,0]}} >
       
       <PerformanceMonitor onIncline={() => setDpr(2)} onDecline={() => setDpr(0.5)} >
         <Sky azimuth={100} inclination={0.8} distance={200} mieCoefficient={0} />
         <Stars radius={50} />
         <Grass />
-        <PositionalAudio url={forest} autoplay playbackRate={1} loop />
+        <Text3D scale={5} position={[-70,25,-80]} color={"black"} font={font}>RENDEZVOUS GARDENS</Text3D>
         <Bounds fit clip>
           <GreatControls>
           <Display position={[0,8,0]} scale={5} />
@@ -139,7 +93,7 @@ function App(...props) {
         <OrbitControls makeDefault position={[0, 8, 0]} enableZoom={false} enablePan={false} maxDistance={1} minDistance={1} rotateSpeed={-1}/>
         </PerformanceMonitor>
       </Canvas>
-      </Suspense>}
+      </Suspense>
     </div>
   );
 }
