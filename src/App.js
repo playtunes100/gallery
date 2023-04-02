@@ -7,7 +7,7 @@ import font from './assets/fonts/Press.json'
 import Grass from './Grass.js'
 import list from './list.js'
 
-function Frame({name, url, song, center = new THREE.Vector3(0,5,0), c = new THREE.Color(), caption='A piece of art that doesnt last very long because of inflation.',...props}){
+function Frame({name, url, song, center = new THREE.Vector3(0,8,0), c = new THREE.Color(), caption='A piece of art that doesnt last very long because of inflation.',...props}){
   const image = useRef()
   const frame = useRef()
   const audio = useRef()
@@ -74,13 +74,13 @@ function GreatControls({ children }) {
 
 function App(...props) {
   
-  const [dpr, setDpr] = useState(0.5)
+  const [dpr, setDpr] = useState(1)
   return (
     <div className='App' style={{ width: window.innerWidth, height: window.innerHeight }}>
       <Suspense fallback={<span className='loading'>loading</span>}>
       <Canvas dpr={dpr} camera={{ position: [0,8,0]}} >
       
-      <PerformanceMonitor onIncline={() => setDpr(2)} onDecline={() => setDpr(0.5)} >
+      <PerformanceMonitor onIncline={() => setDpr(2)} onDecline={() => setDpr(1)} >
         <Sky azimuth={100} inclination={0.8} distance={200} mieCoefficient={0} />
         <Stars radius={50} />
         <Grass />
