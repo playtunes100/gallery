@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/gallery/static/css/main.d818a1fe.css",
-    "main.js": "/gallery/static/js/main.9d162a48.js",
+    "main.js": "/gallery/static/js/main.240788a9.js",
     "static/js/787.d7e7aaf3.chunk.js": "/gallery/static/js/787.d7e7aaf3.chunk.js",
-    "static/media/New-paper-bag.mp3": "/gallery/static/media/New-paper-bag.e69a88a7af91b85a2d78.mp3",
-    "static/media/chilled-and-posted.mp3": "/gallery/static/media/chilled-and-posted.4a60d2b48c7c60185d57.mp3",
-    "static/media/Night-Wolves.mp3": "/gallery/static/media/Night-Wolves.21ede204cba55c79602e.mp3",
-    "static/media/go-away-come-my-way.mp3": "/gallery/static/media/go-away-come-my-way.763274835fb5edf43cdf.mp3",
-    "static/media/doing-what-we-do.mp3": "/gallery/static/media/doing-what-we-do.21773bc889078d8abd04.mp3",
-    "static/media/The-life.mp3": "/gallery/static/media/The-life.59b9500d72fe3e4d2375.mp3",
-    "static/media/Fashion-figures.mp3": "/gallery/static/media/Fashion-figures.4738bb22e9b851cc07db.mp3",
-    "static/media/Selection.mp3": "/gallery/static/media/Selection.86d86d852e08adfe2b0f.mp3",
-    "static/media/soul-for-soles.mp3": "/gallery/static/media/soul-for-soles.1ca880921a5d9049da50.mp3",
-    "static/media/The-OG.mp3": "/gallery/static/media/The-OG.28ba84ce939a93003799.mp3",
-    "static/media/Again.mp3": "/gallery/static/media/Again.d23f59180f2f29edaf4e.mp3",
-    "static/media/The-Tall.mp3": "/gallery/static/media/The-Tall.613f0c2dd297bd18d5d5.mp3",
-    "static/media/Taxilians.mp3": "/gallery/static/media/Taxilians.47b667600601d70c4177.mp3",
-    "static/media/Good-Morning.mp3": "/gallery/static/media/Good-Morning.3a3ccdb0cf8c80f03a86.mp3",
+    "static/media/New-paper-bag.ogg": "/gallery/static/media/New-paper-bag.6410c6ef61af8542c040.ogg",
+    "static/media/chilled-and-posted.ogg": "/gallery/static/media/chilled-and-posted.d1fdc82e46d921ad19dc.ogg",
+    "static/media/Night-Wolves.ogg": "/gallery/static/media/Night-Wolves.7058ab0800fcfe9c9fca.ogg",
+    "static/media/go-away-come-my-way.ogg": "/gallery/static/media/go-away-come-my-way.f024f053288bb9ab7711.ogg",
+    "static/media/The-life.ogg": "/gallery/static/media/The-life.fd99d0730fb34846cfdb.ogg",
+    "static/media/doing-what-we-do.ogg": "/gallery/static/media/doing-what-we-do.7f64a169f38a40e8f36a.ogg",
+    "static/media/soul-for-soles.ogg": "/gallery/static/media/soul-for-soles.e0e40f64ce284caddf26.ogg",
+    "static/media/Selection.ogg": "/gallery/static/media/Selection.84323003981d7edb01a9.ogg",
+    "static/media/The-OG.ogg": "/gallery/static/media/The-OG.91690cd4ca173b565b40.ogg",
+    "static/media/The-Tall.ogg": "/gallery/static/media/The-Tall.b5c541e526354b05299e.ogg",
+    "static/media/Again.ogg": "/gallery/static/media/Again.ead46fdfb0282c448ccf.ogg",
+    "static/media/Taxilians.ogg": "/gallery/static/media/Taxilians.f421fa74e214fca0df5c.ogg",
+    "static/media/Fashion-figures.ogg": "/gallery/static/media/Fashion-figures.26086265566b252e2002.ogg",
+    "static/media/Good-Morning.ogg": "/gallery/static/media/Good-Morning.69da3035aeda098a257b.ogg",
     "static/media/5.jpg": "/gallery/static/media/5.80a2748ac89700293dff.jpg",
     "static/media/1.jpg": "/gallery/static/media/1.b29727310ce4176bde8b.jpg",
     "static/media/6.jpg": "/gallery/static/media/6.8411ef17f4001a66a3a4.jpg",
@@ -28,11 +28,11 @@
     "static/media/3.jpg": "/gallery/static/media/3.22e9600a8463e66fb6e7.jpg",
     "index.html": "/gallery/index.html",
     "main.d818a1fe.css.map": "/gallery/static/css/main.d818a1fe.css.map",
-    "main.9d162a48.js.map": "/gallery/static/js/main.9d162a48.js.map",
+    "main.240788a9.js.map": "/gallery/static/js/main.240788a9.js.map",
     "787.d7e7aaf3.chunk.js.map": "/gallery/static/js/787.d7e7aaf3.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d818a1fe.css",
-    "static/js/main.9d162a48.js"
+    "static/js/main.240788a9.js"
   ]
 }
