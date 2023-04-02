@@ -15,7 +15,7 @@
   align-items: center;
   justify-content: center;
   color: aliceblue;
-  font-size: 200px;
+  font-size: 60px;
 }
 .loading::after {
   display: inline-block;
